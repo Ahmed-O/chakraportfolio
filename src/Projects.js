@@ -17,21 +17,20 @@ import { projectData } from './projectData'
 function Projects() {
   
     return (
-    <Box>
+      <Box>
         <VStack spacing={2} textAlign="center">
-            <Heading as="h1" fontSize="4xl">
-                Projects
-            </Heading>
-            <Text fontSize="lg" color={'gray.500'}>
+          <Heading as="h1" fontSize="4xl" pt="25px">
+            Projects
+          </Heading>
+          <Text fontSize="lg" color={'gray.500'}>
             ...
-            </Text>
+          </Text>
         </VStack>
-        {projectData.map((proj)=>{
-        return (
-            <Project key={proj.id} {...proj}></Project>
-        )})}
-    </Box>
-  )
+        {projectData.map(proj => {
+          return <Project key={proj.id} {...proj}></Project>;
+        })}
+      </Box>
+    );
 }
 
 export default Projects

@@ -36,13 +36,14 @@ function Hero() {
             lineHeight={'110%'}
           >
             I'm Ahmed Osman <br />
-            <Text as={'span'} color={'green.400'}>
-            This is my portfolio
+            <Text as={'span'} color={'blue.400'}>
+              This is my portfolio
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            I'm an aspiring software developer currently looking for work as an entry level developer.
-            Please feel free to check out my portfolio and let me know if I would be a good fit. 
+            I'm an aspiring software developer currently looking for work as an
+            entry level developer. Please feel free to check out my portfolio
+            and let me know if I would be a good fit.
           </Text>
           <Stack
             direction={'column'}
@@ -52,12 +53,12 @@ function Hero() {
             position={'relative'}
           >
             <Button
-              colorScheme={'green'}
-              bg={'green.400'}
+              colorScheme={'blue'}
+              bg={'blue.400'}
               rounded={'full'}
               px={6}
               _hover={{
-                bg: 'green.500',
+                bg: 'blue.500',
               }}
             >
               View Portfolio

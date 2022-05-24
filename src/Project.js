@@ -49,17 +49,17 @@ export default function Project({title, image, description, techStack, demoLink,
               {description}
             </Text>
             <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-              {techStack.map((item)=>{
-                  return (
-                    <Badge
-                      px={2}
-                      py={1}
+              {techStack.map(item => {
+                return (
+                  <Badge
+                    px={2}
+                    py={1}
                     //   bg={useColorModeValue('gray.50', 'gray.800')}
-                      fontWeight={'400'}
-                    >
-                      {item}
-                    </Badge>
-                  );
+                    fontWeight={'400'}
+                  >
+                    {item}
+                  </Badge>
+                );
               })}
             </Stack>
 

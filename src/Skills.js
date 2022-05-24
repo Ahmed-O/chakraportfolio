@@ -13,6 +13,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 // function PriceWrapper({ children }: { children: ReactNode }) {
 function PriceWrapper({ children }) {
@@ -21,9 +22,17 @@ function PriceWrapper({ children }) {
       mb={4}
       shadow="base"
       borderWidth="1px"
-      alignSelf={{ base: 'center', lg: 'flex-start' }}
+      alignSelf={{ base: 'center', xl: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}>
+      borderRadius={'xl'}
+      w={{
+        base: '350px',
+        sm: '450px',
+        md: '740px',
+        xl: '380px',
+        '2xl': '400px',
+      }}
+    >
       {children}
     </Box>
   );
@@ -41,18 +50,19 @@ function Skills() {
         </Text>
       </VStack>
       <Stack
-        direction={{ base: 'column', md: 'row' }}
+        direction={{ base: 'column', xl: 'row' }}
         textAlign="center"
         justify="center"
         spacing={{ base: 4, lg: 10 }}
         py={10}
+        // w={{ sm: '100%', md: '100%' }}
       >
         <PriceWrapper>
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
               Libraries/Frameworks
             </Text>
-            <HStack justifyContent="center">
+            {/* <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
                 $
               </Text>
@@ -62,7 +72,7 @@ function Skills() {
               <Text fontSize="3xl" color="gray.500">
                 /month
               </Text>
-            </HStack>
+            </HStack> */}
           </Box>
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
@@ -93,13 +103,13 @@ function Skills() {
 
         <PriceWrapper>
           <Box position="relative">
-            <Box
+            {/* <Box
               position="absolute"
               top="-16px"
               left="50%"
               style={{ transform: 'translate(-50%)' }}
             >
-              {/* <Text
+              <Text
                 textTransform="uppercase"
                 bg={useColorModeValue('red.300', 'red.700')}
                 px={3}
@@ -109,13 +119,13 @@ function Skills() {
                 fontWeight="600"
                 rounded="xl">
                 Most Popular
-              </Text> */}
-            </Box>
+              </Text>
+            </Box> */}
             <Box py={4} px={12}>
               <Text fontWeight="500" fontSize="2xl">
                 Languages
               </Text>
-              <HStack justifyContent="center">
+              {/* <HStack justifyContent="center">
                 <Text fontSize="3xl" fontWeight="600">
                   $
                 </Text>
@@ -125,7 +135,7 @@ function Skills() {
                 <Text fontSize="3xl" color="gray.500">
                   /month
                 </Text>
-              </HStack>
+              </HStack> */}
             </Box>
             <VStack
               bg={useColorModeValue('gray.50', 'gray.700')}
@@ -167,7 +177,7 @@ function Skills() {
             <Text fontWeight="500" fontSize="2xl">
               Developer Tools
             </Text>
-            <HStack justifyContent="center">
+            {/* <HStack justifyContent="center">
               <Text fontSize="3xl" fontWeight="600">
                 $
               </Text>
@@ -177,7 +187,7 @@ function Skills() {
               <Text fontSize="3xl" color="gray.500">
                 /month
               </Text>
-            </HStack>
+            </HStack> */}
           </Box>
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
