@@ -38,9 +38,6 @@ export default function Project({title, image, description, techStack, demoLink,
             <Heading fontSize={'2xl'} fontFamily={'body'}>
               {title}
             </Heading>
-            {/* <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
-              @lindsey_jam3s
-            </Text> */}
             <Text
               textAlign={'center'}
               color={useColorModeValue('gray.700', 'gray.400')}
@@ -54,7 +51,7 @@ export default function Project({title, image, description, techStack, demoLink,
                   <Badge
                     px={2}
                     py={1}
-                    //   bg={useColorModeValue('gray.50', 'gray.800')}
+                    // bg={useColorModeValue('gray.50', 'gray.800')}
                     fontWeight={'400'}
                   >
                     {item}

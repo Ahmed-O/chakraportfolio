@@ -96,7 +96,7 @@ function App() {
         <Skills></Skills>
       </Box>
 
-      <Projects></Projects>
+      <Projects />
       <Contact />
     </Box>
     //</ChakraProvider>
