@@ -62,6 +62,7 @@ function Skills() {
       }}
       minH="100vh"
       py={12}
+      id="Skills"
     >
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">

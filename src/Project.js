@@ -18,7 +18,7 @@ export default function Project({title, image, description, techStack, demoLink,
           borderWidth="1px"
           borderRadius="lg"
           w={{ sm: '100%', md: '75%' }}
-          height={{ sm: '476px', md: '25rem' }}
+          height={{ sm: '820px', md: '25rem' }}
           direction={{ base: 'column', md: 'row' }}
           bg={useColorModeValue('white', 'gray.900')}
           boxShadow={'2xl'}
