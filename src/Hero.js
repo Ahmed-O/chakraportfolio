@@ -84,9 +84,9 @@ function Hero() {
             >
               View Portfolio
             </Button>
-            <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+            {/* <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
               Learn more
-            </Button>
+            </Button> */}
           </Stack>
         </Stack>
       </Container>
