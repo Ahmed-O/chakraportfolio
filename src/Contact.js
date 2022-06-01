@@ -24,20 +24,13 @@ import { MdEmail } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
 
-const confetti = {
-  light: {
-    primary: '4299E1', // blue.400
-    secondary: 'BEE3F8', // blue.100
-  },
-
-  dark: {
-    primary: '1A365D', // blue.900
-    secondary: '2A4365', // blue.800
-  },
-};
 
 export default function Contact() {
   const { hasCopied, onCopy } = useClipboard('ahmedosman36610@gmail.com');
+
+  const contactSubmit = () => {
+    console.log('Clicked');
+  };
 
   return (
     <Flex
@@ -174,6 +167,7 @@ export default function Contact() {
                       bg: 'blue.500',
                     }}
                     isFullWidth
+                    onSubmit={contactSubmit}
                   >
                     Send Message
                   </Button>

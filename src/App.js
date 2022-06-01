@@ -57,32 +57,16 @@ function App() {
         left="0"
         zIndex="-1"
       ></Box>
-      {/* <Box
-        bgColor="#1976d2"
-        // bg="linear-gradient(to top,  #ffffff, #2980b9)"
-        bg={useColorModeValue(
-          'linear-gradient(to bottom,  #ffffff, #2980b9)',
-          'linear-gradient(to bottom,  #1A202C, #2980b9)'
-        )}
-        transform="skewY(8deg)"
-        transformOrigin="100%"
-        minH="200vh"
-        minW="100vw"
-        position="absolute"
-        top="45%"
-        left="0"
-        zIndex="-1"
-      ></Box> */}
       <Box
         bgColor="#1976d2"
         // bg="linear-gradient(to top,  #ffffff, #2980b9)"
         bg={useColorModeValue(
-          'linear-gradient(to left,  #ffffff, #2980b9)',
+          'linear-gradient(to top,  #ffffff, #2980b9)',
           'linear-gradient(to top,  #1A202C, #2980b9)'
         )}
         transform="skewY(8deg)"
         transformOrigin="100%"
-        minH="300vh"
+        minH="290vh"
         minW="100vw"
         position="absolute"
         bottom="0"
