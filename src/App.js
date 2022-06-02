@@ -10,6 +10,8 @@ import {
   SlideFade,
   theme,
   useColorModeValue,
+  keyframes,
+  usePrefersReducedMotion,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
@@ -29,6 +31,20 @@ function App() {
     { disconnectOnLeave: false },
     {}
   );
+
+  //   const spin = keyframes`
+  //   from { transform: rotate(0deg); }
+  //   to { transform: rotate(360deg); }
+  // `;
+  const spin = keyframes`
+  from {  background: linear-gradient(to left,  #ffffff, #2980b9); }
+  to { background: linear-gradient(to middle,  #ffffff, #2980b9); }
+`;
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  const animation = prefersReducedMotion
+    ? undefined
+    : `${spin} infinite 5s ease-in`;
 
   return (
     //<ChakraProvider theme={theme}>
@@ -61,17 +77,18 @@ function App() {
         bgColor="#1976d2"
         // bg="linear-gradient(to top,  #ffffff, #2980b9)"
         bg={useColorModeValue(
-          'linear-gradient(to top,  #ffffff, #2980b9)',
-          'linear-gradient(to top,  #1A202C, #2980b9)'
+          'linear-gradient(to bottom,  #ffffff, #2980b9)',
+          'linear-gradient(to bottom,  #1A202C, #2980b9)'
         )}
-        transform="skewY(8deg)"
+        transform="skewY(0deg)"
         transformOrigin="100%"
-        minH="290vh"
+        minH="100vh"
         minW="100vw"
         position="absolute"
         bottom="0"
         left="0"
         zIndex="-1"
+        // animation={animation}
       ></Box>
       <Grid minH="100vh" p={3}>
         <ColorModeSwitcher justifySelf="flex-end" />
