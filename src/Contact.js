@@ -23,7 +23,7 @@ import { ImGithub, ImTwitter } from 'react-icons/im';
 import { MdEmail } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
-
+import { Formik, Form } from 'formik';
 
 export default function Contact() {
   const { hasCopied, onCopy } = useClipboard('ahmedosman36610@gmail.com');
@@ -125,53 +125,70 @@ export default function Contact() {
                 color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                 shadow="base"
               >
-                <VStack spacing={5}>
-                  <FormControl isRequired>
-                    <FormLabel>Name</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<BsPerson />} />
-                      <Input type="text" name="name" placeholder="Your Name" />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Email</FormLabel>
-
-                    <InputGroup>
-                      <InputLeftElement children={<AiOutlineMail />} />
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                      />
-                    </InputGroup>
-                  </FormControl>
-
-                  <FormControl isRequired>
-                    <FormLabel>Message</FormLabel>
-
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={6}
-                      resize="none"
-                    />
-                  </FormControl>
-
-                  <Button
-                    colorScheme="blue"
-                    bg="blue.400"
-                    color="white"
-                    _hover={{
-                      bg: 'blue.500',
+                <Formik>
+                  <Form
+                    onSubmit={e => {
+                      setTimeout(() => {
+                        e.target[0].value = '';
+                        e.target[1].value = ' ';
+                        e.target[2].value = `Thanks reaching out! I'll get back to you as soon as possible.`;
+                      }, 500);
+                      e.preventDefault();
                     }}
-                    isFullWidth
-                    onSubmit={contactSubmit}
                   >
-                    Send Message
-                  </Button>
-                </VStack>
+                    <VStack spacing={5}>
+                      <FormControl isRequired>
+                        <FormLabel>Name</FormLabel>
+
+                        <InputGroup>
+                          <InputLeftElement children={<BsPerson />} />
+                          <Input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl isRequired>
+                        <FormLabel>Email</FormLabel>
+
+                        <InputGroup>
+                          <InputLeftElement children={<AiOutlineMail />} />
+                          <Input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl isRequired>
+                        <FormLabel>Message</FormLabel>
+
+                        <Textarea
+                          name="message"
+                          placeholder="Your Message"
+                          rows={6}
+                          resize="none"
+                        />
+                      </FormControl>
+
+                      <Button
+                        colorScheme="blue"
+                        bg="blue.400"
+                        color="white"
+                        _hover={{
+                          bg: 'blue.500',
+                        }}
+                        isFullWidth
+                        type="submit"
+                      >
+                        Send Message
+                      </Button>
+                    </VStack>
+                  </Form>
+                </Formik>
               </Box>
             </Stack>
           </VStack>
