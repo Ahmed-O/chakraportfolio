@@ -185,7 +185,7 @@ function Skills() {
                   {/* <ListIcon as={SiJavascript} color="yellow.400" boxSize={10} /> */}
                   <Image
                     src={useColorModeValue(
-                      '.images/javascript.gif',
+                      'images/javascript.gif',
                       JavasriptLogo
                     )}
                     boxSize={10}
