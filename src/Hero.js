@@ -16,7 +16,6 @@ import {
 import React, { useRef } from 'react';
 import useSmoothScroll from 'react-smooth-scroll-hook';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
-import { SHAPES_LIGHT } from './shapeData';
 
 function Hero() {
   const ref = useRef(null);
@@ -48,7 +47,7 @@ function Hero() {
         >
           <Heading
             fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            fontSize={{ base: '4xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}
           >
             Hi, I'm Ahmed <br />
