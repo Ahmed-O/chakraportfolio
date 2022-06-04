@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/chakraportfolio/static/js/main.a9fda3b1.js",
+    "main.js": "/chakraportfolio/static/js/main.6a146078.js",
     "static/js/377.c1855308.chunk.js": "/chakraportfolio/static/js/377.c1855308.chunk.js",
     "index.html": "/chakraportfolio/index.html",
-    "main.a9fda3b1.js.map": "/chakraportfolio/static/js/main.a9fda3b1.js.map",
+    "main.6a146078.js.map": "/chakraportfolio/static/js/main.6a146078.js.map",
     "377.c1855308.chunk.js.map": "/chakraportfolio/static/js/377.c1855308.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a9fda3b1.js"
+    "static/js/main.6a146078.js"
   ]
 }
