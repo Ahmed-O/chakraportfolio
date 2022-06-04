@@ -109,7 +109,7 @@ function Skills() {
               <ListItem display={'flex'} gap={'10px'}>
                 {/* <ListIcon as={FaReact} color="blue.500" boxSize={10} /> */}
                 <Image
-                  src={useColorModeValue('./images/react.gif', ReactLogo)}
+                  src={useColorModeValue('images/react.gif', ReactLogo)}
                   boxSize={10}
                 />
                 React
