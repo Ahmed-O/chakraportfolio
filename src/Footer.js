@@ -9,8 +9,6 @@ import {
   Button,
   Image,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { ReactNode } from 'react';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
 import { IconsLogo } from './skillLogos';
 
