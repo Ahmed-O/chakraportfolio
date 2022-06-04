@@ -12,10 +12,16 @@ import {
   ListIcon,
   Button,
 } from '@chakra-ui/react';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
+import {
+  SiJavascript,
+  SiCplusplus,
+  SiRedux,
+  SiChakraui,
+  SiGit,
+} from 'react-icons/si';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
-
 
 // function PriceWrapper({ children }: { children: ReactNode }) {
 function PriceWrapper({ children }) {
@@ -91,15 +97,15 @@ function Skills() {
           >
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaReact} color="blue.500" boxSize={10} />
                 React
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={SiRedux} color="purple.500" boxSize={10} />
                 Redux
               </ListItem>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={FaReact} color="green.500" boxSize={10} />
                 ChakraUI
               </ListItem>
             </List>
@@ -152,21 +158,21 @@ function Skills() {
               py={4}
               borderBottomRadius={'xl'}
             >
-              <List spacing={3} textAlign="start" px={12}>
+              <List spacing={3} textAlign="start" px={12} fontWeight="500">
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaHtml5} color="orange.500" boxSize={10} />
                   HTML
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={FaCss3Alt} color="blue.500" boxSize={10} />
                   CSS
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={SiJavascript} color="yellow.400" boxSize={10} />
                   Javascript
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  <ListIcon as={SiCplusplus} color="blue.500" boxSize={10} />
                   C++
                 </ListItem>
                 <ListItem>
@@ -206,7 +212,7 @@ function Skills() {
           >
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListIcon as={SiGit} color="orange.500" boxSize={10} />
                 Git/Github
               </ListItem>
               <ListItem>
@@ -230,4 +236,5 @@ function Skills() {
   );
 }
 
-export default Skills
+export default Skills;
+

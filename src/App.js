@@ -21,6 +21,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
+import { SHAPES_LIGHT, testSVG } from './shapeData';
 import { useInViewport } from 'react-in-viewport';
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
     //<ChakraProvider theme={theme}>
     <Box
       css={{
-        backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
+        backgroundImage: useColorModeValue(testSVG, CONFETTI_DARK),
         backgroundAttachment: 'fixed',
       }}
       textAlign="center"

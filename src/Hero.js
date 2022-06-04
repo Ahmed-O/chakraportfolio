@@ -16,6 +16,7 @@ import {
 import React, { useRef } from 'react';
 import useSmoothScroll from 'react-smooth-scroll-hook';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
+import { SHAPES_LIGHT } from './shapeData';
 
 function Hero() {
   const ref = useRef(null);
@@ -55,7 +56,10 @@ function Hero() {
               This is my portfolio
             </Text>
           </Heading>
-          <Text color={'gray.500'}>
+          <Text
+            color={useColorModeValue('gray.800', 'gray.500')}
+            fontWeight={500}
+          >
             I'm an aspiring software developer currently looking for work as an
             entry level developer. Please feel free to check out my portfolio
             and let me know if I would be a good fit.
@@ -75,10 +79,12 @@ function Hero() {
               _hover={{
                 bg: 'blue.500',
               }}
-              onClick={scrollTo('#Skills')}
+              onClick={() => {
+                window.open('Resumev1.pdf');
+              }}
               ref={ref}
             >
-              <Link href="#Skills"> View Portfolio</Link>
+              <Link> View Resume</Link>
             </Button>
             {/* <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
               Learn more
