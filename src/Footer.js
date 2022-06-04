@@ -41,7 +41,6 @@ export const Footer = ({ children, label, href }) => {
 export default function SmallWithSocial() {
   return (
     <Box
-      //   bg={useColorModeValue('gray.500', 'gray.1000')}
       bg={useColorModeValue('gray.100', 'gray.900')}
       color={useColorModeValue('gray.700', 'gray.200')}
       css={{
