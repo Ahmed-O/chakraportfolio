@@ -51,18 +51,18 @@ function Hero() {
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}
           >
-            I'm Ahmed Osman <br />
+            Hi, I'm Ahmed <br />
             <Text as={'span'} color={'blue.400'}>
-              This is my portfolio
+              Welcome to my portfolio
             </Text>
           </Heading>
           <Text
-            color={useColorModeValue('gray.800', 'gray.500')}
+            color={useColorModeValue('gray.800', 'gray.300')}
             fontWeight={500}
           >
-            I'm an aspiring software developer currently looking for work as an
-            entry level developer. Please feel free to check out my portfolio
-            and let me know if I would be a good fit.
+            I'm an aspiring developer currently looking for my first tech job.
+            Please feel free to check out my portfolio and let me know if I
+            would be a good fit.
           </Text>
           <Stack
             direction={'column'}

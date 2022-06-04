@@ -7,10 +7,12 @@ import {
   useColorModeValue,
   VisuallyHidden,
   Button,
+  Image,
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
+import { IconsLogo } from './skillLogos';
 
 export const Footer = ({ children, label, href }) => {
   return (
@@ -49,25 +51,34 @@ export default function SmallWithSocial() {
     >
       <Container
         as={Stack}
-        maxW={'6xl'}
+        minW={'100%'}
         py={4}
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text color={useColorModeValue('gray.700', 'gray.200')}>
+        <Box></Box>
+        <Text
+          color={useColorModeValue('gray.700', 'gray.200')}
+          fontWeight="700"
+        >
           Ahmed Osman ©2022 Made With ChakraUI
         </Text>
-        <Stack direction={'row'} spacing={6}>
-          <Button label={'Twitter'} href={'#'}>
-            <FaTwitter />
-          </Button>
-          <Button label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </Button>
-          <Button label={'Instagram'} href={'#'}>
-            <FaInstagram />
+        <Stack direction={'row'} alignItems="center">
+          <Text
+            color={useColorModeValue('gray.700', 'gray.200')}
+            fontWeight="500"
+            fontSize="lg"
+          >
+            Icons from Icon8
+          </Text>
+          <Button
+            label={'Icons8'}
+            href={'https://icons8.com/'}
+            onClick={() => window.open('https://icons8.com/')}
+          >
+            <Image src={IconsLogo} />
           </Button>
         </Stack>
       </Container>

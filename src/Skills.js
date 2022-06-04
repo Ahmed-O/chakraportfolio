@@ -11,6 +11,7 @@ import {
   ListItem,
   ListIcon,
   Button,
+  Image,
 } from '@chakra-ui/react';
 import { FaCheckCircle, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 import {
@@ -19,9 +20,18 @@ import {
   SiRedux,
   SiChakraui,
   SiGit,
+  SiMysql,
 } from 'react-icons/si';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
+import {
+  SQLLogo,
+  ChakraUILogo,
+  GoogleCloudLogo,
+  ReactLogo,
+  JavasriptLogo,
+  ChromeLogo,
+} from './skillLogos';
 
 // function PriceWrapper({ children }: { children: ReactNode }) {
 function PriceWrapper({ children }) {
@@ -96,16 +106,20 @@ function Skills() {
             borderBottomRadius={'xl'}
           >
             <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaReact} color="blue.500" boxSize={10} />
+              <ListItem display={'flex'} gap={'10px'}>
+                {/* <ListIcon as={FaReact} color="blue.500" boxSize={10} /> */}
+                <Image
+                  src={useColorModeValue('./images/react.gif', ReactLogo)}
+                  boxSize={10}
+                />
                 React
               </ListItem>
-              <ListItem>
+              <ListItem display={'flex'}>
                 <ListIcon as={SiRedux} color="purple.500" boxSize={10} />
                 Redux
               </ListItem>
-              <ListItem>
-                <ListIcon as={FaReact} color="green.500" boxSize={10} />
+              <ListItem display={'flex'} gap={'10px'}>
+                <Image src={ChakraUILogo} boxSize={10} />
                 ChakraUI
               </ListItem>
             </List>
@@ -159,24 +173,32 @@ function Skills() {
               borderBottomRadius={'xl'}
             >
               <List spacing={3} textAlign="start" px={12} fontWeight="500">
-                <ListItem>
+                <ListItem display={'flex'}>
                   <ListIcon as={FaHtml5} color="orange.500" boxSize={10} />
                   HTML
                 </ListItem>
-                <ListItem>
+                <ListItem display={'flex'}>
                   <ListIcon as={FaCss3Alt} color="blue.500" boxSize={10} />
                   CSS
                 </ListItem>
-                <ListItem>
-                  <ListIcon as={SiJavascript} color="yellow.400" boxSize={10} />
+                <ListItem display={'flex'} gap={'10px'}>
+                  {/* <ListIcon as={SiJavascript} color="yellow.400" boxSize={10} /> */}
+                  <Image
+                    src={useColorModeValue(
+                      './images/javascript.gif',
+                      JavasriptLogo
+                    )}
+                    boxSize={10}
+                  />
                   Javascript
                 </ListItem>
-                <ListItem>
+                <ListItem display={'flex'}>
                   <ListIcon as={SiCplusplus} color="blue.500" boxSize={10} />
                   C++
                 </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
+                <ListItem display={'flex'} gap={'10px'}>
+                  {/* <ListIcon as={SiMysql} color="brown.500" boxSize={12} /> */}
+                  <Image src={SQLLogo} boxSize={10} />
                   SQL
                 </ListItem>
               </List>
@@ -211,16 +233,19 @@ function Skills() {
             borderBottomRadius={'xl'}
           >
             <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={SiGit} color="orange.500" boxSize={10} />
+              <ListItem display={'flex'}>
+                <ListIcon as={SiGit} color="orange.400" boxSize={10} />
                 Git/Github
               </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+              <ListItem display={'flex'} gap={'10px'}>
+                <Image
+                  src={useColorModeValue('/images/chrome.gif', ChromeLogo)}
+                  boxSize={10}
+                />
                 Chrome Dev Tools
               </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
+              <ListItem display={'flex'} gap={'10px'}>
+                <Image src={GoogleCloudLogo} boxSize={10} />
                 Google Cloud Platform
               </ListItem>
             </List>

@@ -91,27 +91,13 @@ export default function Contact() {
                   />
                 </Tooltip>
 
-                <Link href="#">
+                <Link onClick={() => window.open('https://github.com/Ahmed-O')}>
                   <IconButton
                     aria-label="github"
                     variant="ghost"
                     size="lg"
                     fontSize="3xl"
                     icon={<ImGithub />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Link>
-
-                <Link href="#">
-                  <IconButton
-                    aria-label="twitter"
-                    variant="ghost"
-                    size="lg"
-                    icon={<ImTwitter size="28px" />}
                     _hover={{
                       bg: 'blue.500',
                       color: useColorModeValue('white', 'gray.700'),
