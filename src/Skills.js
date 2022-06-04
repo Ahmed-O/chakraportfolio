@@ -185,7 +185,7 @@ function Skills() {
                   {/* <ListIcon as={SiJavascript} color="yellow.400" boxSize={10} /> */}
                   <Image
                     src={useColorModeValue(
-                      './images/javascript.gif',
+                      '.images/javascript.gif',
                       JavasriptLogo
                     )}
                     boxSize={10}
@@ -239,7 +239,7 @@ function Skills() {
               </ListItem>
               <ListItem display={'flex'} gap={'10px'}>
                 <Image
-                  src={useColorModeValue('/images/chrome.gif', ChromeLogo)}
+                  src={useColorModeValue('images/chrome.gif', ChromeLogo)}
                   boxSize={10}
                 />
                 Chrome Dev Tools
