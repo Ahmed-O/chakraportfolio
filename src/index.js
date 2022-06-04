@@ -6,6 +6,7 @@ import { ChakraProvider, theme } from '@chakra-ui/react';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
+
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 

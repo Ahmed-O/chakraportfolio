@@ -17,16 +17,19 @@ import {
   useColorModeValue,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useRef } from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { ImGithub, ImTwitter } from 'react-icons/im';
 import { MdEmail } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CONFETTI_LIGHT, CONFETTI_DARK } from './confettiData';
 import { Formik, Form } from 'formik';
+import emailjs from '@emailjs/browser';
+import env from 'react-dotenv';
 
 export default function Contact() {
   const { hasCopied, onCopy } = useClipboard('ahmedosman36610@gmail.com');
+  const form = useRef();
 
   const contactSubmit = () => {
     console.log('Clicked');
@@ -128,13 +131,37 @@ export default function Contact() {
                 <Formik>
                   <Form
                     onSubmit={e => {
+                      e.preventDefault();
+                      // Sending email with Emailjs
+                      let msgObj = {
+                        from_name: e.target[0].value,
+                        to_name: e.target[1].value,
+                        message: e.target[2].value,
+                      };
+
+                      emailjs.send(
+                        'service_vkq9afk',
+                        'template_vvr4qfm',
+                        msgObj,
+                        env.API_KEY
+                      );
+                      // .then(
+                      //   result => {
+                      //     console.log(result.text);
+                      //   },
+                      //   error => {
+                      //     console.log(error.text);
+                      //   }
+                      // );
+
+                      // Showing response message
                       setTimeout(() => {
                         e.target[0].value = '';
                         e.target[1].value = ' ';
                         e.target[2].value = `Thanks reaching out! I'll get back to you as soon as possible.`;
                       }, 500);
-                      e.preventDefault();
                     }}
+                    ref={form}
                   >
                     <VStack spacing={5}>
                       <FormControl isRequired>
