@@ -13,7 +13,13 @@ import {
   Button,
   Image,
 } from '@chakra-ui/react';
-import { FaCheckCircle, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
+import {
+  FaCheckCircle,
+  FaHtml5,
+  FaCss3Alt,
+  FaNodeJs,
+  FaReact,
+} from 'react-icons/fa';
 import {
   SiJavascript,
   SiCplusplus,
@@ -200,6 +206,10 @@ function Skills() {
                   {/* <ListIcon as={SiMysql} color="brown.500" boxSize={12} /> */}
                   <Image src={SQLLogo} boxSize={10} />
                   SQL
+                </ListItem>
+                <ListItem display={'flex'}>
+                  <ListIcon as={FaNodeJs} color="green.500" boxSize={10} />
+                  NodeJS
                 </ListItem>
               </List>
               {/* <Box w="80%" pt={7}>
