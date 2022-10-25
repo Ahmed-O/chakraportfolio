@@ -20,7 +20,7 @@ export const projectData = [
   {
     id: 3,
     title: 'BluTube',
-    image: '/images/blutube.png',
+    image: 'images/blutube.png',
     description: `Implemented the UI for a Youtube clone using custom made React components. Allowed for search functionality using Youtube’s v3 data API.`,
     techStack: ['JSX', 'CSS', 'React', 'YouTube APIv3'],
     demoLink: 'https://youtube.com',
